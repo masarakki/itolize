@@ -3,6 +3,10 @@
 Make everypage Itolife.
 ワンクリックであらゆるページが伊東ライフ化します
 
+## インストール
+
+[chromw web store](https://chrome.google.com/webstore/detail/cjemkfbldcldpeoolmcoloefoahopgki/publish-delayed) でインストールできます
+
 ## 使い方
 
 1. [Mikachanフォント](http://www001.upp.so-net.ne.jp/mikachan/) をインストールする
