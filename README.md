@@ -5,7 +5,7 @@ Make everypage Itolife.
 
 ## インストール
 
-[chromw web store](https://chrome.google.com/webstore/detail/cjemkfbldcldpeoolmcoloefoahopgki/publish-delayed) でインストールできます
+[chromw web store](https://chrome.google.com/webstore/detail/cjemkfbldcldpeoolmcoloefoahopgki) でインストールできます
 
 ## 使い方
 
