@@ -1,5 +1,4 @@
-'use strict';
-let css = `.${chrome.runtime.id} * { font-family: Mikachan !important; }`;
+const css = `.${chrome.runtime.id} * { font-family: Mikachan !important; }`;
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.message == 'insertCSS') {
@@ -16,7 +15,7 @@ chrome.runtime.onInstalled.addListener(details => {
 });
 
 chrome.browserAction.onClicked.addListener(tab => {
-  chrome.tabs.sendMessage(tab.id, {method: 'toggle'}, response => {
+  chrome.tabs.sendMessage(tab.id, {method: 'toggleStatus'}, response => {
     if (response) {
       changeIcon(response.status);
     }
@@ -24,14 +23,14 @@ chrome.browserAction.onClicked.addListener(tab => {
 });
 
 chrome.tabs.onActivated.addListener(activeInfo => {
-  chrome.tabs.sendMessage(activeInfo.tabId, {method: 'status'}, response => {
+  chrome.tabs.sendMessage(activeInfo.tabId, {method: 'getStatus'}, response => {
     if (response) {
       changeIcon(response.status);
     }
   });
 });
 
-let changeIcon = (status) => {
-  let icon = status ? 'images/icon-on.png' : 'images/icon-off.png';
+const changeIcon = status => {
+  const icon = status ? 'images/icon-on.png' : 'images/icon-off.png';
   chrome.browserAction.setIcon({path: icon}, res => {});
 };
